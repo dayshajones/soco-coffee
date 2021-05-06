@@ -1,8 +1,6 @@
 # SocoCoffee
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/soco_coffee`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to Soco Coffee CLI gem! This gem is designed to list the top-rated coffee shops in Sonoma County. It will then ask the user to pick a coffee shop and it will return more details such as the address and phone number of the shop. Exit if you're fully caffeinated!
 
 ## Installation
 
