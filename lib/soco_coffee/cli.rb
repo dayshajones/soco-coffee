@@ -13,7 +13,9 @@ class SocoCoffee::CLI
 
     def welcome
         puts "-------------------------------------------------------"
-        puts "Welcome to coffee shops, would you like to read about the best coffee shops in Sonoma County? y or n"
+        puts "Welcome to SocoCoffee Shops..."
+        puts ""
+        puts "Do you want to see the top-rated coffee shops in Sonoma County? y or n"
         puts "-------------------------------------------------------"
         input = gets.strip
         if input == 'y' 
@@ -21,6 +23,8 @@ class SocoCoffee::CLI
         elsif input == 'n'
             goodbye
         else
+            invalid
+            sleep 1
             welcome
         end
     end
@@ -44,34 +48,19 @@ class SocoCoffee::CLI
                 shop = SocoCoffee::Shops.all[input.to_i-1]
                     puts "--------------------------------------------------------------------------------------------------------------"
                     puts "Coffee Shop: #{shop.info}"
-                    # puts "#{shop.details}"
+                    puts ""
                     puts "--------------------------------------------------------------------------------------------------------------"
             else input.to_i > SocoCoffee::Shops.all.size
                 invalid
+                sleep 1
                 list_shops
             end
         end
     end
 
-    # def more_details
-    #     puts "-------------------------------------------------------"
-    #     puts "Which coffee shop would you like more details about"
-    #     puts "-------------------------------------------------------"
-    #     list_shops
-    #     input = gets.strip
-    #     if input.to_i <= SocoCoffee::Shops.all.size
-    #         shop = SocoCoffee::Shops.all[input.to_i-1]
-    #         puts "-------------------------------------------------------"
-    #         puts "#{shop.details}"
-    #         puts "-------------------------------------------------------"
-    #     else
-    #         goodbye
-    #     end
-    # end
-
     def question
         puts "--------------------------------------------------------------------------------------------------------------"
-        puts "Enter a number for more information or exit to quit."
+        puts "Enter a number for more details or exit to quit."
         puts "--------------------------------------------------------------------------------------------------------------"
     end
 

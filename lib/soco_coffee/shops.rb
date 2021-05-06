@@ -6,12 +6,11 @@ class SocoCoffee::Shops
 
     @@all = []
 
-    attr_accessor :name, :info, :details
+    attr_accessor :name, :info
 
     def initialize(name, info)
         @name = name
         @info = info
-        @details = details
         save
     end
 
